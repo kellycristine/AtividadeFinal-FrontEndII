@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
+      "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+  .nav-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.link-fora {
+  font-family: 'Rubik Wet Paint', cursive;
+  font-size: 40px;
+   font-weight: bold; /* Torna o texto gordinho */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #333; /* Cor padrão do texto dos links */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a:hover {
+  color: #ff6600; /* Cor do texto dos links ao passar o mouse (laranja, por exemplo) */
+}
+  
+  header .logo {
+    width: 5em;
+  }
+  
+  header nav {
+    text-align: center;
+    color: green;
+    padding: 70px 20px;
+  }
+  
+  header nav h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  header nav #searchBar {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 45em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  main #characters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    padding: 0 300px;
+    margin-bottom: 50px;
+  }
+  
+  main .gif {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  main img {
+    width: 50%;
+    max-width: 260px;
+  }
+  
+  .card {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: rgb(228, 223, 223);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 27em;
+    transition: ease-in-out 0.5s;
+  }
+  
+  .card:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.2s;
+  }
+  
+  .card img {
+    border-radius: 10px;
+    position: relative;
+    width: 10em;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .card .status {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .Dead {
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+  }
+  .Alive {
+    background-color: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+  }
+  .unknown {
+    background-color: rgb(61, 61, 61);
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+  }
+  
+  .card h3 {
+    color: rgb(42, 148, 10);
+  }
+  
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #414040;
+    color: white;
+    padding: 30px 0;
+    gap: 50px;
+  }
+  
+  footer nav {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+  }
+  
+  footer span {
+    font-weight: bolder;
+  }
+  
+  footer span {
+    opacity: 0.5;
+    transition: 0.2s;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  span:hover {
+    opacity: 1;
+    color: green;
+  }
+  
+  @media (max-width: 1530px) {
+    main #characters {
+      padding: 0, 20px;
+    }
+  
+    .card {
+      flex-direction: column;
+      width: 15em;
+    }
+  
+    .card img {
+      width: 100%;
+    }
+  
+    .card aside {
+      height: 200px;
+      width: px;
+    }
+  }

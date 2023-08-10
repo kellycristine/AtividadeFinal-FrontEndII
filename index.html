@@ -1,14 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Rick & Morty</title>
+    <link rel="stylesheet" href="./style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
-<body>
-    
-    <script src="./index.js"></script>
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-topo">
+        <a href="./index.html"><img class="logo" src="./images/icone-esquerdo_091410~2.png" alt="Rick and Morty simbolo cinza"/></a>
+        <div class="nav-links">
+            <a class="link-fora" href="https://rickandmortyapi.com/documentation" target="_blank">Docs</a>  
+            <a class="link-fora" href="https://rickandmortyapi.com/about" target="_blank">About</a>    
+        </div>
+    </nav>
+      <nav>
+        <h1>API de Rick and Morty</h1>
+        <input id="searchBar" type="text" placeholder="Pesquise" />
+      </nav>
+    </header>
+    <main>
+      <section id="characters"></section>
+      <div class="gif" style="background-color: #222222">
+        <img
+          src="https://www.icegif.com/wp-content/uploads/2022/06/icegif-519.gif"
+          alt="Rick and Morty"/>
+      </div>
+    </main>
+    <footer>
+      <nav>
+        <h4>Personagens: <span id="personagens"></span></h4>
+        <h4>Localizações: <span id="localizacoes"></span></h4>
+        <h4>Episódios: <span id="episodios"></span></h4>
+      </nav>
+      <p>
+        Desenvolvido por:
+        <a href="https://github.com/kellycristine" target="_blank"
+          ><span class="name">Kelly Cristine</span></a
+        >
+        em 2023
+      </p>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
 </html>
