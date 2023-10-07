@@ -1,3 +1,12 @@
+const characters = document.querySelector("#characters");
+const totalCharacters = document.querySelector("#personagens");
+const totalLocations = document.querySelector("#localizacoes");
+const totalEpisodes = document.querySelector("#episodios");
+const API_characters = "https://rickandmortyapi.com/api/character";
+const API_locations = "https://rickandmortyapi.com/api/location";
+const API_episodes = "https://rickandmortyapi.com/api/location";
+
+
 const apiUrl = "https://rickandmortyapi.com/api/";
 const campoBusca = document.getElementById("campoBusca");
 const resultado = document.getElementById("resultado");
