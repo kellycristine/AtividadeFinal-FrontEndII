@@ -1,4 +1,4 @@
-const characters = document.querySelector("#characters");
+/*const characters = document.querySelector("#characters");
 const totalCharacters = document.querySelector("#personagens");
 const totalLocations = document.querySelector("#localizacoes");
 const totalEpisodes = document.querySelector("#episodios");
@@ -112,8 +112,8 @@ campoBusca.addEventListener("input", () => {
     opcoesBusca.innerHTML = "";
     resultado.innerHTML = "";
   }
-});
-/*
+});*/
+
 const characters = document.querySelector("#characters");
 const totalCharacters = document.querySelector("#personagens");
 const totalLocations = document.querySelector("#localizacoes");
@@ -166,4 +166,49 @@ axios.get(API_locations).then(function (response) {
 axios.get(API_episodes).then(function (response) {
   totalEpisodes.innerHTML = response.data.info.count;
   console.log(response);
-});*/
+});
+
+function buscarPersonagem(nome) {
+  axios.get(apiUrl + "character", {
+      params: { name: nome },
+    })
+    .then((response) => {
+      const personagens = response.data.results;
+
+      if (personagens.length > 0) {
+        mostrarPersonagem(personagens[0]);
+      } else {
+        resultado.innerHTML = "Personagem não encontrado.";
+      }
+
+      exibirOpcoesBusca(personagens);
+    })
+    .catch((error) => {
+      console.error("Erro ao buscar personagem:", error);
+      resultado.innerHTML = "Ocorreu um erro ao buscar o personagem.";
+    });
+}
+
+function exibirOpcoesBusca(personagens) {
+  opcoesBusca.innerHTML = "";
+  personagens.forEach((personagem) => {
+    const opcao = document.createElement("div");
+    opcao.textContent = personagem.name;
+    opcao.classList.add("opcao-busca");
+    opcao.addEventListener("click", () => {
+      campoBusca.value = personagem.name;
+      buscarPersonagem(personagem.name);
+    });
+    opcoesBusca.appendChild(opcao);
+  });
+}
+
+campoBusca.addEventListener("input", () => {
+  const nomePersonagem = campoBusca.value.trim();
+  if (nomePersonagem !== "") {
+    buscarPersonagem(nomePersonagem);
+  } else {
+    opcoesBusca.innerHTML = "";
+    resultado.innerHTML = "";
+  }
+});
