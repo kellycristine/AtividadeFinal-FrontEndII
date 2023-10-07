@@ -1,4 +1,4 @@
-/*const apiUrl = "https://rickandmortyapi.com/api/";
+const apiUrl = "https://rickandmortyapi.com/api/";
 const campoBusca = document.getElementById("campoBusca");
 const resultado = document.getElementById("resultado");
 const opcoesBusca = document.getElementById("opcoesBusca");
@@ -103,8 +103,8 @@ campoBusca.addEventListener("input", () => {
     opcoesBusca.innerHTML = "";
     resultado.innerHTML = "";
   }
-});*/
-
+});
+/*
 const characters = document.querySelector("#characters");
 const totalCharacters = document.querySelector("#personagens");
 const totalLocations = document.querySelector("#localizacoes");
@@ -157,4 +157,4 @@ axios.get(API_locations).then(function (response) {
 axios.get(API_episodes).then(function (response) {
   totalEpisodes.innerHTML = response.data.info.count;
   console.log(response);
-});
+});*/
